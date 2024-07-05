@@ -45,31 +45,37 @@ function displayProducts(products) {
   });
 }
 
-function searchProduct(inventory, query) {
-  query = query.toLowerCase();
-  return inventory.filter((item) =>
-    item.name.toLowerCase().includes(query) ||
-    item.category.toLowerCase().includes(query)
-  );
+function sortProducts(products, key, order = 'asc') {
+  return products.sort((a, b) => {
+    if (order === 'asc') {
+      return a[key] > b[key] ? 1 : -1;
+    } else {
+      return a[key] < b[key] ? 1 : -1;
+    }
+  });
 }
 
-function sortProducts(products, criteria, order = 'asc') {
-  return products.sort((a, b) => {
-    if (criteria === 'price') {
-      return order === 'asc' ? a.price - b.price : b.price - a.price;
-    } else if (criteria === 'name') {
-      if (a.name < b.name) return order === 'asc' ? -1 : 1;
-      if (a.name > b.name) return order === 'asc' ? 1 : -1;
-      return 0;
-    }
+function initializeSort(inventory) {
+  document.getElementById("sort-price-asc").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'price', 'asc');
+    displayProducts(sortedProducts);
+  });
+
+  document.getElementById("sort-price-desc").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'price', 'desc');
+    displayProducts(sortedProducts);
+  });
+
+  document.getElementById("sort-item-name").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'name', 'asc');
+    displayProducts(sortedProducts);
   });
 }
 
 loadCSV("javascript/items.csv", (data) => {
   const inventory = parseCSV(data);
   displayProducts(inventory);
-  initializeFilters(inventory); // Initialize filters from filters.js
-  initializeSort(inventory);    // Initialize sorting from sort.js
+  initializeSort(inventory);
 
   const searchButton = document.getElementById("search-button");
   const searchInput = document.getElementById("search-input");
@@ -94,4 +100,3 @@ loadCSV("javascript/items.csv", (data) => {
     displayProducts(inventory);
   });
 });
-
