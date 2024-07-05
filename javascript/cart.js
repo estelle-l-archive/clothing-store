@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function displayCartItems(cart) {
-    cartProductsList.innerHTML = ""; // Clear any existing content
+    cartProductsList.innerHTML = "";
 
     if (cart.length === 0) {
       cartProductsList.innerHTML = "<p>Your cart is empty.</p>";
@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
       cartProductsList.appendChild(productDiv);
     });
 
-    // Add event listeners to the "Remove" buttons
     document.querySelectorAll(".remove-from-cart-button").forEach(button => {
       button.addEventListener("click", (event) => {
         const index = event.target.getAttribute('data-index');
@@ -46,6 +45,5 @@ document.addEventListener("DOMContentLoaded", function() {
     loadCart();
   }
 
-  // Load cart items on page load
   loadCart();
 });

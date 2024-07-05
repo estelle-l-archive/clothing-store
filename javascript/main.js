@@ -25,7 +25,7 @@ function parseCSV(data) {
 
 function displayProducts(products) {
   const productList = document.getElementById("product-info-list");
-  productList.innerHTML = ""; // Clear any existing content
+  productList.innerHTML = "";
 
   products.forEach((product) => {
     const productDiv = document.createElement("div");
@@ -45,7 +45,6 @@ function displayProducts(products) {
     productList.appendChild(productDiv);
   });
 
-  // Add event listeners to the "Add to Cart" buttons
   document.querySelectorAll(".add-to-cart-button").forEach(button => {
     button.addEventListener("click", (event) => {
       const product = JSON.parse(event.target.getAttribute('data-product').replace(/&apos;/g, "'"));
