@@ -45,7 +45,7 @@ nav ul li:hover {
 
 main {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 #product-results-section, #cart-section {
@@ -112,6 +112,50 @@ input {
 
 #sort-container:hover, #filter-category:hover, #filter-price:hover, #filter-color:hover, #filter-size:hover {
   color: darkgrey;
+}
+
+/* Product list container */
+#product-info-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: flex-start;
+}
+
+/* Product card styles */
+.product-card {
+  min-width: 250px;
+  max-width: calc(25% - 40px);
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  padding: 15px;
+  transition: background-color 0.3s ease, transform 0.3s;
+  text-align: center;
+
+}
+
+.product-card img.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 1em;
+}
+
+/* Hover effects for product cards */
+.product-card:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.02);
 }
 
 #checkout-container {

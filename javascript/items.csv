@@ -1,51 +1,51 @@
-id,name,category,price,color,size,gender,
-1,Men's T-Shirt,Tops,19.99,Black,M,Men's,
-2,Women's Jeans,Bottoms,29.99,Blue,S,Women's,
-3,Men's Hoodie,Outerwear,39.99,Gray,L,Men's,
-4,Women's Dress,Dresses,49.99,Red,M,Women's,
-5,Men's Shorts,Bottoms,24.99,Khaki,L,Men's,
-6,Women's Blouse,Tops,22.99,White,M,Women's,
-7,Women's T-Shirt,Tops,18.99,Gray,S,Women's,
-8,Men's Jeans,Bottoms,34.99,Black,L,Men's,
-9,Women's Jacket,Outerwear,59.99,Black,M,Women's,
-10,Men's Sweater,Tops,44.99,Blue,XL,Men's,
-11,Women's Skirt,Bottoms,26.99,Black,S,Women's,
-12,Men's Polo Shirt,Tops,29.99,Red,M,Men's,
-13,Women's Cardigan,Tops,39.99,Beige,L,Women's,
-14,Men's Jacket,Outerwear,54.99,Navy,XL,Men's,
-15,Women's Leggings,Bottoms,21.99,Black,S,Women's,
-16,Men's Dress Shirt,Tops,49.99,White,M,Men's,
-17,Women's Sweater,Tops,37.99,Gray,M,Women's,
-18,Men's Chinos,Bottoms,31.99,Beige,32,Men's,
-19,Women's Blazer,Outerwear,69.99,Black,L,Women's,
-20,Men's Sweatpants,Bottoms,27.99,Gray,XL,Men's,
-21,Women's Romper,Dresses,34.99,Blue,M,Women's,
-22,Men's Suit,Outerwear,99.99,Charcoal,42,Men's,
-23,Women's Jumpsuit,Dresses,39.99,Black,M,Women's,
-24,Men's Tank Top,Tops,14.99,White,M,Men's,
-25,Women's Polo Shirt,Tops,26.99,Navy,S,Women's,
-26,Men's Cargo Shorts,Bottoms,29.99,Olive,34,Men's,
-27,Women's Tank Top,Tops,12.99,Black,S,Women's,
-28,Men's Blazer,Outerwear,79.99,Gray,42,Men's,
-29,Women's Sweatpants,Bottoms,24.99,Gray,M,Women's,
-30,Men's Cardigan,Tops,34.99,Charcoal,L,Men's,
-31,Women's Hoodie,Outerwear,44.99,Purple,S,Women's,
-32,Men's Flannel Shirt,Tops,37.99,Plaid,L,Men's,
-33,Women's Parka,Outerwear,89.99,Olive,L,Women's,
-34,Men's Swim Trunks,Bottoms,19.99,Blue,L,Men's,
-35,Women's Trench Coat,Outerwear,79.99,Beige,M,Women's,
-36,Men's Beanie,Accessories,12.99,Black,One Size,Men's,
-37,Women's Sunglasses,Accessories,19.99,Black,One Size,Women's,
-38,Men's Belt,Accessories,14.99,Brown,32,Men's,
-39,Women's Scarf,Accessories,16.99,Red,One Size,Women's,
-40,Men's Watch,Accessories,49.99,Silver,One Size,Men's,
-41,Women's Handbag,Accessories,39.99,Black,One Size,Women's,
-42,Men's Socks,Accessories,8.99,Gray,One Size,Men's,
-43,Women's Gloves,Accessories,11.99,Black,One Size,Women's,
-44,Men's Backpack,Accessories,54.99,Blue,One Size,Men's,
-45,Women's Earrings,Accessories,9.99,Gold,One Size,Women's,
-46,Men's Wallet,Accessories,24.99,Black,One Size,Men's,
-47,Women's Necklace,Accessories,14.99,Silver,One Size,Women's,
-48,Men's Cologne,Fragrance,39.99,NA,NA,Men's,
-49,Women's Perfume,Fragrance,49.99,NA,NA,Women's,
-50,Unisex Cologne,Fragrance,34.99,NA,NA,Unisex,
+id,name,category,price,color,size,gender,picture_link
+1,Men's T-Shirt,Tops,19.99,Black,M,Men's,https://example.com/images/mens-tshirt.jpg
+2,Women's Jeans,Bottoms,29.99,Blue,S,Women's,https://example.com/images/womens-jeans.jpg
+3,Men's Hoodie,Outerwear,39.99,Gray,L,Men's,https://example.com/images/mens-hoodie.jpg
+4,Women's Dress,Dresses,49.99,Red,M,Women's,https://example.com/images/womens-dress.jpg
+5,Men's Shorts,Bottoms,24.99,Khaki,L,Men's,https://example.com/images/mens-shorts.jpg
+6,Women's Blouse,Tops,22.99,White,M,Women's,https://example.com/images/womens-blouse.jpg
+7,Women's T-Shirt,Tops,18.99,Gray,S,Women's,https://example.com/images/womens-tshirt.jpg
+8,Men's Jeans,Bottoms,34.99,Black,L,Men's,https://example.com/images/mens-jeans.jpg
+9,Women's Jacket,Outerwear,59.99,Black,M,Women's,https://example.com/images/womens-jacket.jpg
+10,Men's Sweater,Tops,44.99,Blue,XL,Men's,https://example.com/images/mens-sweater.jpg
+11,Women's Skirt,Bottoms,26.99,Black,S,Women's,https://example.com/images/womens-skirt.jpg
+12,Men's Polo Shirt,Tops,29.99,Red,M,Men's,https://example.com/images/mens-polo.jpg
+13,Women's Cardigan,Tops,39.99,Beige,L,Women's,https://example.com/images/womens-cardigan.jpg
+14,Men's Jacket,Outerwear,54.99,Navy,XL,Men's,https://example.com/images/mens-jacket.jpg
+15,Women's Leggings,Bottoms,21.99,Black,S,Women's,https://example.com/images/womens-leggings.jpg
+16,Men's Dress Shirt,Tops,49.99,White,M,Men's,https://example.com/images/mens-dress-shirt.jpg
+17,Women's Sweater,Tops,37.99,Gray,M,Women's,https://example.com/images/womens-sweater.jpg
+18,Men's Chinos,Bottoms,31.99,Beige,32,Men's,https://example.com/images/mens-chinos.jpg
+19,Women's Blazer,Outerwear,69.99,Black,L,Women's,https://example.com/images/womens-blazer.jpg
+20,Men's Sweatpants,Bottoms,27.99,Gray,XL,Men's,https://example.com/images/mens-sweatpants.jpg
+21,Women's Romper,Dresses,34.99,Blue,M,Women's,https://example.com/images/womens-romper.jpg
+22,Men's Suit,Outerwear,99.99,Charcoal,42,Men's,https://example.com/images/mens-suit.jpg
+23,Women's Jumpsuit,Dresses,39.99,Black,M,Women's,https://example.com/images/womens-jumpsuit.jpg
+24,Men's Tank Top,Tops,14.99,White,M,Men's,https://example.com/images/mens-tank-top.jpg
+25,Women's Polo Shirt,Tops,26.99,Navy,S,Women's,https://example.com/images/womens-polo.jpg
+26,Men's Cargo Shorts,Bottoms,29.99,Olive,34,Men's,https://example.com/images/mens-cargo-shorts.jpg
+27,Women's Tank Top,Tops,12.99,Black,S,Women's,https://example.com/images/womens-tank-top.jpg
+28,Men's Blazer,Outerwear,79.99,Gray,42,Men's,https://example.com/images/mens-blazer.jpg
+29,Women's Sweatpants,Bottoms,24.99,Gray,M,Women's,https://example.com/images/womens-sweatpants.jpg
+30,Men's Cardigan,Tops,34.99,Charcoal,L,Men's,https://example.com/images/mens-cardigan.jpg
+31,Women's Hoodie,Outerwear,44.99,Purple,S,Women's,https://example.com/images/womens-hoodie.jpg
+32,Men's Flannel Shirt,Tops,37.99,Plaid,L,Men's,https://example.com/images/mens-flannel.jpg
+33,Women's Parka,Outerwear,89.99,Olive,L,Women's,https://example.com/images/womens-parka.jpg
+34,Men's Swim Trunks,Bottoms,19.99,Blue,L,Men's,https://example.com/images/mens-swim-trunks.jpg
+35,Women's Trench Coat,Outerwear,79.99,Beige,M,Women's,https://example.com/images/womens-trench-coat.jpg
+36,Men's Beanie,Accessories,12.99,Black,One Size,Men's,https://example.com/images/mens-beanie.jpg
+37,Women's Sunglasses,Accessories,19.99,Black,One Size,Women's,https://example.com/images/womens-sunglasses.jpg
+38,Men's Belt,Accessories,14.99,Brown,32,Men's,https://example.com/images/mens-belt.jpg
+39,Women's Scarf,Accessories,16.99,Red,One Size,Women's,https://example.com/images/womens-scarf.jpg
+40,Men's Watch,Accessories,49.99,Silver,One Size,Men's,https://example.com/images/mens-watch.jpg
+41,Women's Handbag,Accessories,39.99,Black,One Size,Women's,https://example.com/images/womens-handbag.jpg
+42,Men's Socks,Accessories,8.99,Gray,One Size,Men's,https://example.com/images/mens-socks.jpg
+43,Women's Gloves,Accessories,11.99,Black,One Size,Women's,https://example.com/images/womens-gloves.jpg
+44,Men's Backpack,Accessories,54.99,Blue,One Size,Men's,https://example.com/images/mens-backpack.jpg
+45,Women's Earrings,Accessories,9.99,Gold,One Size,Women's,https://example.com/images/womens-earrings.jpg
+46,Men's Wallet,Accessories,24.99,Black,One Size,Men's,https://example.com/images/mens-wallet.jpg
+47,Women's Necklace,Accessories,14.99,Silver,One Size,Women's,https://example.com/images/womens-necklace.jpg
+48,Men's Cologne,Fragrance,39.99,NA,NA,Men's,https://example.com/images/mens-cologne.jpg
+49,Women's Perfume,Fragrance,49.99,NA,NA,Women's,https://example.com/images/womens-perfume.jpg
+50,Unisex Cologne,Fragrance,34.99,NA,NA,Unisex,https://example.com/images/unisex-cologne.jpg
