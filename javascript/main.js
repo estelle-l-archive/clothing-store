@@ -58,10 +58,25 @@ loadCSV("javascript/items.csv", (data) => {
   displayProducts(inventory);
 
   const searchButton = document.getElementById("search-button");
-  searchButton.addEventListener("click", () => {
-    const searchInput = document.getElementById("search-input");
+  const searchInput = document.getElementById("search-input");
+
+  const executeSearch = () => {
     const query = searchInput.value;
     const filteredProducts = filterProducts(inventory, query);
     displayProducts(filteredProducts);
+  };
+
+  searchButton.addEventListener("click", executeSearch);
+
+  searchInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      executeSearch();
+    }
+  });
+
+  const resetButton = document.getElementById("reset-button");
+  resetButton.addEventListener("click", () => {
+    searchInput.value = "";
+    displayProducts(inventory);
   });
 });
