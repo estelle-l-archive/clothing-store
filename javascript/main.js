@@ -53,6 +53,18 @@ function filterProducts(inventory, query) {
   );
 }
 
+function sortProducts(products, criteria, order = 'asc') {
+  return products.sort((a, b) => {
+    if (criteria === 'price') {
+      return order === 'asc' ? a.price - b.price : b.price - a.price;
+    } else if (criteria === 'name') {
+      if (a.name < b.name) return order === 'asc' ? -1 : 1;
+      if (a.name > b.name) return order === 'asc' ? 1 : -1;
+      return 0;
+    }
+  });
+}
+
 loadCSV("javascript/items.csv", (data) => {
   const inventory = parseCSV(data);
   displayProducts(inventory);
@@ -78,5 +90,20 @@ loadCSV("javascript/items.csv", (data) => {
   resetButton.addEventListener("click", () => {
     searchInput.value = "";
     displayProducts(inventory);
+  });
+
+  document.getElementById("sort-price-asc").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'price', 'asc');
+    displayProducts(sortedProducts);
+  });
+
+  document.getElementById("sort-price-desc").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'price', 'desc');
+    displayProducts(sortedProducts);
+  });
+
+  document.getElementById("sort-item-name").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'name', 'asc');
+    displayProducts(sortedProducts);
   });
 });
