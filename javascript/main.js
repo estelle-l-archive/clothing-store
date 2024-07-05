@@ -45,7 +45,23 @@ function displayProducts(products) {
   });
 }
 
+function filterProducts(inventory, query) {
+  query = query.toLowerCase();
+  return inventory.filter((item) =>
+    item.name.toLowerCase().includes(query) ||
+    item.category.toLowerCase().includes(query)
+  );
+}
+
 loadCSV("javascript/items.csv", (data) => {
   const inventory = parseCSV(data);
   displayProducts(inventory);
+
+  const searchButton = document.getElementById("search-button");
+  searchButton.addEventListener("click", () => {
+    const searchInput = document.getElementById("search-input");
+    const query = searchInput.value;
+    const filteredProducts = filterProducts(inventory, query);
+    displayProducts(filteredProducts);
+  });
 });
