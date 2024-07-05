@@ -9,6 +9,10 @@ body {
   justify-content: center;
 }
 
+a {
+  all: unset;
+}
+
 header {
   padding: 20px;
   border-bottom: 1px solid darkgrey;
