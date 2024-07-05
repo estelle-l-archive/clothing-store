@@ -10,6 +10,7 @@ Flowchart:
 
 
 Figma mockup:
+
 <a href="https://www.figma.com/design/T0Hm3g69L8Otey8eqXJ24G/Awesome-Clothing-Store?node-id=0-1&t=Q8EkxSkKesnrVUeQ-1" target="_blank">https://www.figma.com/design/T0Hm3g69L8Otey8eqXJ24G/Awesome-Clothing-Store?node-id=0-1&t=Q8EkxSkKesnrVUeQ-1</a>
 
 
