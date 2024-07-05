@@ -352,3 +352,15 @@ a:hover {
 .remove-from-cart-button:hover {
   background-color: darkred;
 }
+#banner-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+#banner-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
