@@ -1,0 +1,134 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  padding: 20px;
+  border-bottom: 1px solid darkgrey;
+}
+
+#header-1, #header-2 {
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: darkgrey;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+#product-results-section, #cart-section {
+  padding: 20px;
+  border-bottom: 1px solid darkgrey;
+}
+
+#products-heading, #cart-heading {
+  display: flex;
+  align-items: center;
+}
+
+#products-heading-icon img, #cart-heading-icon img {
+  height: 30px;
+  margin-right: 10px;
+}
+
+#search-sort-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  margin: 20px 0;
+}
+
+#search-container {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  all: unset;
+}
+
+#search-box {
+  border: 1px solid darkgrey;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+#search-icon {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#search-icon:hover {
+  color: darkgrey;
+}
+
+#sort-filter-container {
+  display: flex;
+  gap: 20px;
+}
+
+#sort-container, #filter-category, #filter-price, #filter-color, #filter-size {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border: 1px solid darkgrey;
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+#sort-container:hover, #filter-category:hover, #filter-price:hover, #filter-color:hover, #filter-size:hover {
+  color: darkgrey;
+}
+
+#checkout-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#checkout-button {
+  background-color: darkgrey;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#checkout-button:hover {
+  background-color: grey;
+}
