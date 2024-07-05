@@ -25,14 +25,14 @@ header {
 
 #header-1 {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
 
 #header-2 {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   align-items: center;
   gap: 16px;
 }
@@ -60,17 +60,20 @@ main {
   justify-content: flex-start;
 }
 
-#product-results-section, #cart-section {
+#product-results-section,
+#cart-section {
   padding: 20px;
   border-bottom: 1px solid darkgrey;
 }
 
-#products-heading, #cart-heading {
+#products-heading,
+#cart-heading {
   display: flex;
   align-items: center;
 }
 
-#products-heading-icon img, #cart-heading-icon img {
+#products-heading-icon img,
+#cart-heading-icon img {
   height: 30px;
   margin-right: 10px;
 }
@@ -113,7 +116,11 @@ input {
   gap: 20px;
 }
 
-#sort-container, #filter-category, #filter-price, #filter-color, #filter-size {
+#sort-container,
+#filter-category,
+#filter-price,
+#filter-color,
+#filter-size {
   cursor: pointer;
   transition: color 0.3s ease;
   border: 1px solid darkgrey;
@@ -122,7 +129,11 @@ input {
   border-radius: 5px;
 }
 
-#sort-container:hover, #filter-category:hover, #filter-price:hover, #filter-color:hover, #filter-size:hover {
+#sort-container:hover,
+#filter-category:hover,
+#filter-price:hover,
+#filter-color:hover,
+#filter-size:hover {
   color: darkgrey;
 }
 
@@ -190,7 +201,7 @@ input {
   color: #005cfb;
 }
 
-a:hover {
+nav a:hover {
   border-bottom: 2px solid #005cfb;
 }
 
@@ -228,7 +239,7 @@ a:hover {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -264,7 +275,7 @@ a:hover {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   max-height: 200px;
   overflow-y: auto;
@@ -337,24 +348,36 @@ a:hover {
   color: white;
   border: none;
   padding: 5px 10px;
+  border-radius: 5px; /* Slightly rounded edges */
   cursor: pointer;
   font-size: 12px;
   align-self: flex-start;
   margin-top: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .remove-from-cart-button:hover {
-  background-color: darkred;
-}
-#banner-container {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  margin-bottom: 20px;
+  background-color: darkred; /* Darker red on hover */
 }
 
-#banner-container img {
+#banner-container {
+  background-image: url('https://cdn.place2be.berlin/images/Platte_Berlin_c_promo_Chris_Abat.width-1600.format-webp.webp');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
   width: 100%;
-  height: auto;
-  display: block;
+}
+
+.add-to-cart-button {
+  background-color: #005cfb; /* Blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px; /* Slightly rounded edges */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #004bb5; /* Darker blue on hover */
 }
