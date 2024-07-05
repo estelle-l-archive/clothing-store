@@ -18,7 +18,20 @@ header {
   border-bottom: 1px solid darkgrey;
 }
 
-#header-1, #header-2 {
+#logo-brand-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#header-1 {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+#header-2 {
   display: flex;
   justify-content:flex-start;
   align-items: center;
@@ -271,3 +284,25 @@ a:hover {
   display: block;
 }
 
+#cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#cart-icon {
+  width: 40px;
+  height: auto;
+}
+
+#cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: orange;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 12px;
+}

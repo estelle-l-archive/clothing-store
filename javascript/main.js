@@ -39,9 +39,18 @@ function displayProducts(products) {
       <p>Color: ${product.color}</p>
       <p>Size: ${product.size}</p>
       <p>Gender: ${product.gender}</p>
+      <button class="add-to-cart-button" data-product='${JSON.stringify(product).replace(/'/g, "&apos;")}'>Add to Cart</button>
     `;
 
     productList.appendChild(productDiv);
+  });
+
+  // Add event listeners to the "Add to Cart" buttons
+  document.querySelectorAll(".add-to-cart-button").forEach(button => {
+    button.addEventListener("click", (event) => {
+      const product = JSON.parse(event.target.getAttribute('data-product').replace(/&apos;/g, "'"));
+      addToCart(product);
+    });
   });
 }
 
@@ -64,6 +73,40 @@ function sortProducts(products, criteria, order = 'asc') {
     }
   });
 }
+
+function initializeSort(inventory) {
+  document.getElementById("sort-price-asc").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'price', 'asc');
+    displayProducts(sortedProducts);
+  });
+
+  document.getElementById("sort-price-desc").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'price', 'desc');
+    displayProducts(sortedProducts);
+  });
+
+  document.getElementById("sort-item-name").addEventListener("click", () => {
+    const sortedProducts = sortProducts([...inventory], 'name', 'asc');
+    displayProducts(sortedProducts);
+  });
+}
+
+function addToCart(product) {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+  cart.push(product);
+  
+  localStorage.setItem('cart', JSON.stringify(cart));
+  
+  updateCartCount();
+}
+
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  document.getElementById('cart-count').innerText = cart.length;
+}
+
+document.addEventListener("DOMContentLoaded", updateCartCount);
 
 loadCSV("javascript/items.csv", (data) => {
   const inventory = parseCSV(data);
@@ -107,4 +150,3 @@ loadCSV("javascript/items.csv", (data) => {
     displayProducts(sortedProducts);
   });
 });
-
