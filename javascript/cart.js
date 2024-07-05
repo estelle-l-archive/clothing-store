@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const cartProductsList = document.getElementById("cart-products-list");
 
   function loadCart() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
     displayCartItems(cart);
   }
 
@@ -30,18 +30,18 @@ document.addEventListener("DOMContentLoaded", function() {
       cartProductsList.appendChild(productDiv);
     });
 
-    document.querySelectorAll(".remove-from-cart-button").forEach(button => {
+    document.querySelectorAll(".remove-from-cart-button").forEach((button) => {
       button.addEventListener("click", (event) => {
-        const index = event.target.getAttribute('data-index');
+        const index = event.target.getAttribute("data-index");
         removeFromCart(index);
       });
     });
   }
 
   function removeFromCart(index) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.splice(index, 1);
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
     loadCart();
   }
 

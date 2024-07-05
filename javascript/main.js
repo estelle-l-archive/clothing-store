@@ -32,22 +32,28 @@ function displayProducts(products) {
     productDiv.classList.add("product-card");
 
     productDiv.innerHTML = `
-      <img src="${product.picture_link}" alt="${product.name}" class="product-image">
+      <img src="${product.picture_link}" alt="${
+      product.name
+    }" class="product-image">
       <h3>${product.name}</h3>
       <p>Category: ${product.category}</p>
       <p>Price: $${product.price}</p>
       <p>Color: ${product.color}</p>
       <p>Size: ${product.size}</p>
       <p>Gender: ${product.gender}</p>
-      <button class="add-to-cart-button" data-product='${JSON.stringify(product).replace(/'/g, "&apos;")}'>Add to Cart</button>
+      <button class="add-to-cart-button" data-product='${JSON.stringify(
+        product
+      ).replace(/'/g, "&apos;")}'>Add to Cart</button>
     `;
 
     productList.appendChild(productDiv);
   });
 
-  document.querySelectorAll(".add-to-cart-button").forEach(button => {
+  document.querySelectorAll(".add-to-cart-button").forEach((button) => {
     button.addEventListener("click", (event) => {
-      const product = JSON.parse(event.target.getAttribute('data-product').replace(/&apos;/g, "'"));
+      const product = JSON.parse(
+        event.target.getAttribute("data-product").replace(/&apos;/g, "'")
+      );
       addToCart(product);
     });
   });
@@ -55,19 +61,20 @@ function displayProducts(products) {
 
 function searchProduct(inventory, query) {
   query = query.toLowerCase();
-  return inventory.filter((item) =>
-    item.name.toLowerCase().includes(query) ||
-    item.category.toLowerCase().includes(query)
+  return inventory.filter(
+    (item) =>
+      item.name.toLowerCase().includes(query) ||
+      item.category.toLowerCase().includes(query)
   );
 }
 
-function sortProducts(products, criteria, order = 'asc') {
+function sortProducts(products, criteria, order = "asc") {
   return products.sort((a, b) => {
-    if (criteria === 'price') {
-      return order === 'asc' ? a.price - b.price : b.price - a.price;
-    } else if (criteria === 'name') {
-      if (a.name < b.name) return order === 'asc' ? -1 : 1;
-      if (a.name > b.name) return order === 'asc' ? 1 : -1;
+    if (criteria === "price") {
+      return order === "asc" ? a.price - b.price : b.price - a.price;
+    } else if (criteria === "name") {
+      if (a.name < b.name) return order === "asc" ? -1 : 1;
+      if (a.name > b.name) return order === "asc" ? 1 : -1;
       return 0;
     }
   });
@@ -75,34 +82,34 @@ function sortProducts(products, criteria, order = 'asc') {
 
 function initializeSort(inventory) {
   document.getElementById("sort-price-asc").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'price', 'asc');
+    const sortedProducts = sortProducts([...inventory], "price", "asc");
     displayProducts(sortedProducts);
   });
 
   document.getElementById("sort-price-desc").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'price', 'desc');
+    const sortedProducts = sortProducts([...inventory], "price", "desc");
     displayProducts(sortedProducts);
   });
 
   document.getElementById("sort-item-name").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'name', 'asc');
+    const sortedProducts = sortProducts([...inventory], "name", "asc");
     displayProducts(sortedProducts);
   });
 }
 
 function addToCart(product) {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
   cart.push(product);
-  
-  localStorage.setItem('cart', JSON.stringify(cart));
-  
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
   updateCartCount();
 }
 
 function updateCartCount() {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  document.getElementById('cart-count').innerText = cart.length;
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  document.getElementById("cart-count").innerText = cart.length;
 }
 
 document.addEventListener("DOMContentLoaded", updateCartCount);
@@ -135,17 +142,17 @@ loadCSV("javascript/items.csv", (data) => {
   });
 
   document.getElementById("sort-price-asc").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'price', 'asc');
+    const sortedProducts = sortProducts([...inventory], "price", "asc");
     displayProducts(sortedProducts);
   });
 
   document.getElementById("sort-price-desc").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'price', 'desc');
+    const sortedProducts = sortProducts([...inventory], "price", "desc");
     displayProducts(sortedProducts);
   });
 
   document.getElementById("sort-item-name").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'name', 'asc');
+    const sortedProducts = sortProducts([...inventory], "name", "asc");
     displayProducts(sortedProducts);
   });
 });
