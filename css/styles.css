@@ -349,7 +349,6 @@ nav a:hover {
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
-  /* Slightly rounded edges */
   cursor: pointer;
   font-size: 12px;
   align-self: flex-start;
@@ -359,7 +358,6 @@ nav a:hover {
 
 .remove-from-cart-button:hover {
   background-color: darkred;
-  /* Darker red on hover */
 }
 
 #banner-container {
@@ -372,17 +370,14 @@ nav a:hover {
 
 .add-to-cart-button {
   background-color: #005cfb;
-  /* Blue color */
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
-  /* Slightly rounded edges */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .add-to-cart-button:hover {
   background-color: #004bb5;
-  /* Darker blue on hover */
 }
