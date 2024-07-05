@@ -43,10 +43,6 @@ nav ul li {
   transition: color 0.3s ease;
 }
 
-nav ul li:hover {
-  color: darkgrey;
-}
-
 main {
   display: flex;
   justify-content: center;
@@ -179,4 +175,20 @@ input {
 
 #checkout-button:hover {
   background-color: grey;
+}
+
+/* Style for the current page link */
+.current-page {
+  font-weight: bold; /* Slightly bolder text */
+  color: #005cfb; /* Noticeable but subtle color */ /* Subtle underline */
+}
+
+a:hover {
+  border-bottom: 2px solid #005cfb;
+}
+
+/* Add focus styles for accessibility */
+.current-page:focus {
+  outline: 2px solid #005cfb; /* Outline for keyboard focus */
+  outline-offset: 2px;
 }
