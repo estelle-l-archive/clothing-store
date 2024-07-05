@@ -45,7 +45,7 @@ function displayProducts(products) {
   });
 }
 
-function filterProducts(inventory, query) {
+function searchProduct(inventory, query) {
   query = query.toLowerCase();
   return inventory.filter((item) =>
     item.name.toLowerCase().includes(query) ||
@@ -68,6 +68,8 @@ function sortProducts(products, criteria, order = 'asc') {
 loadCSV("javascript/items.csv", (data) => {
   const inventory = parseCSV(data);
   displayProducts(inventory);
+  initializeFilters(inventory); // Initialize filters from filters.js
+  initializeSort(inventory);    // Initialize sorting from sort.js
 
   const searchButton = document.getElementById("search-button");
   const searchInput = document.getElementById("search-input");
@@ -91,19 +93,5 @@ loadCSV("javascript/items.csv", (data) => {
     searchInput.value = "";
     displayProducts(inventory);
   });
-
-  document.getElementById("sort-price-asc").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'price', 'asc');
-    displayProducts(sortedProducts);
-  });
-
-  document.getElementById("sort-price-desc").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'price', 'desc');
-    displayProducts(sortedProducts);
-  });
-
-  document.getElementById("sort-item-name").addEventListener("click", () => {
-    const sortedProducts = sortProducts([...inventory], 'name', 'asc');
-    displayProducts(sortedProducts);
-  });
 });
+

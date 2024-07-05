@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script defer src="javascript/main.js"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -56,17 +55,29 @@
               <a href="#" id="sort-item-name">Item name</a>
             </div>
           </div>
-          <div id="filter-category">
-            Category ▼
-          </div>
-          <div id="filter-price">
-            Price ▼
-          </div>
-          <div id="filter-color">
-            Color ▼
-          </div>
-          <div id="filter-size">
-            Size ▼
+          <div id="filters-container">
+            <div id="filter-category" class="filter-dropdown">
+              <button class="filter-button">Category ▼</button>
+              <div class="filter-options" id="category-options">
+              </div>
+            </div>
+            <div id="filter-price" class="filter-dropdown">
+              <button class="filter-button">Price ▼</button>
+              <div class="filter-options">
+                <input type="range" id="price-slider" min="0" max="100" step="10">
+                <span id="price-value">0</span>
+              </div>
+            </div>
+            <div id="filter-color" class="filter-dropdown">
+              <button class="filter-button">Color ▼</button>
+              <div class="filter-options" id="color-options">
+              </div>
+            </div>
+            <div id="filter-size" class="filter-dropdown">
+              <button class="filter-button">Size ▼</button>
+              <div class="filter-options" id="size-options">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -75,6 +86,10 @@
     </section>
 
   </main>
+
+  <script src="javascript/filters.js"></script>
+  <script src="javascript/sort.js"></script>
+  <script src="javascript/main.js"></script>
 
 </body>
 
