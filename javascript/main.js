@@ -23,10 +23,27 @@ function parseCSV(data) {
   return items;
 }
 
-loadCSV('items.csv', (data) => {
-  const inventory = parseCSV(data);
-  //do anything with data here
-  document.getElementById("output").innerText = inventory[0].name;
-  console.log(inventory)
-});
+function displayProducts(products) {
+  const productList = document.getElementById('product-info-list');
+  productList.innerHTML = ''; // Clear any existing content
 
+  products.forEach(product => {
+    const productDiv = document.createElement('div');
+    productDiv.classList.add('product-card');
+
+    productDiv.innerHTML = `
+      <h3>${product.name}</h3>
+      <p>Category: ${product.category}</p>
+      <p>Price: $${product.price}</p>
+      <p>Color: ${product.color}</p>
+      <p>Size: ${product.size}</p>
+    `;
+
+    productList.appendChild(productDiv);
+  });
+}
+
+loadCSV('javascript/items.csv', (data) => {
+  const inventory = parseCSV(data);
+  displayProducts(inventory);
+});
